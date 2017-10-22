@@ -4,7 +4,6 @@ import Footer from './footer/Footer'
 import Main from './main/Main'
 import {connect} from 'react-redux'
 import * as user from '../actions/userAction'
-import {RaisedButton} from 'material-ui';
 
 import '../App.css';
 
@@ -25,8 +24,6 @@ class App extends Component {
                 <Header title='Playground' version='Version 0.1'/>
 
                 <Main/>
-
-                <RaisedButton label="Default" />
 
                 <Footer/>
 
