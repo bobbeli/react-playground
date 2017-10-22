@@ -1,8 +1,10 @@
 import React from 'react';
 import {render} from 'react-dom';
+import {AppBar} from 'material-ui';
+
 
 class Header extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
@@ -10,8 +12,10 @@ class Header extends React.Component {
         return (
             <section id="header">
                 <header>
-                    <h1>{this.props.title}</h1>
-                    <h4>{this.props.version}</h4>
+                    <AppBar
+                        title={this.props.title}
+                        iconClassNameRight="muidocs-icon-navigation-expand-more"
+                    />
                 </header>
 
             </section>

@@ -2,34 +2,45 @@ import React, {Component} from 'react'
 import Header from './header/Header'
 import Footer from './footer/Footer'
 import Main from './main/Main'
-import * as user from '../actions/userAction';
+import {connect} from 'react-redux'
+import * as user from '../actions/userAction'
+import {RaisedButton} from 'material-ui';
 
 import '../App.css';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            user: user.fetchUser(),
-        }
+
+
+    componentWillMount(){
+        this.props.dispatch(user.fetchAPIUser());
 
     }
 
 
     render() {
-       return( <div className="App">
+        return (
+            <div className="App">
 
-            <Header title='Minimal Theme' version='Version 0.1' />
 
-            <Main />
+                <Header title='Playground' version='Version 0.1'/>
 
-            <Footer />
+                <Main/>
 
-        </div>
-       );
+                <RaisedButton label="Default" />
+
+                <Footer/>
+
+            </div>
+        );
     }
 }
 
-export default App;
 
+function mapStateToProps(store) {
+    return {
+        user: store.user.user,
+        userFetched: store.user.fetched,
+    };
+}
 
+export default connect(mapStateToProps)(App);
