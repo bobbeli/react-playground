@@ -1,0 +1,115 @@
+header {
+	$font-size: 16px;
+	$menutoggler_icon: $header-height-small*0.6 + 0px;
+	$menutoggler_line_width: 4px;
+
+	height: $header-height;
+
+	.main-navigation-container{
+		width: 100%;
+		text-align: center;
+	}
+
+	.main-navigation-social-media {
+		justify-content: center;
+		display: flex;
+		float: right;
+
+		align-items: center;
+		height:$header-height + px;
+
+		a:not(:last-child){
+			margin-right: $item_space /2;
+		}
+
+		@include mobile-navigation() {
+			display: none;
+		}
+	}
+
+	.main-navigation {
+		position: relative;
+		display: inline-block;
+		list-style: none;
+		margin-bottom: 0;
+		@include mobile-navigation() {
+			display: none;
+		}
+		.menu-item {
+			display:inline-block;
+			float: left;
+			position: relative;
+			a {
+				text-transform: uppercase;
+				font-size: $font-size;
+				padding: (($header-height - $font-size) / 2) $item_space;
+				display: block;
+				line-height: 100%;
+				font-weight: normal;
+				position: relative;
+				&:before, &:after {
+					content: '';
+					position: absolute;
+					left: $item_space;
+					right: $item_space;
+					bottom: 50%;
+					margin-bottom: -.8rem;
+					height: 3px;
+					background-color: c(white);
+				}
+				&:before {
+					display: none;
+				}
+				&:after {
+					background-color: c(black);
+					right: calc(100% - #{$item_space});
+					@include single-transition(right);
+				}
+			}
+
+			&:hover {
+				.sub-menu {
+					display: block;
+				}
+				&.menu-item-has-children:after {
+					@include transform(rotate(180deg));
+				}
+			}
+			a:hover:after {
+				right: $item_space;
+			}
+		}
+
+		@include mobile-navigation {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: $footer-height + px;
+			max-height: calc(100vh - #{$header-height + px});
+			z-index: 200;
+			text-align: center;
+			& > .menu-item:first-child {
+				border-top: none;
+			}
+			.menu-item {
+				display: block;
+				float: none;
+				width: 100%;
+				&.menu-item-has-children:after {
+					display: none;
+				}
+				a {
+					display: inline-block;
+					font-size: 1.3rem;
+					padding: 1.2rem !important;
+					&:before, &:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+
+	@include clearfix();
+}

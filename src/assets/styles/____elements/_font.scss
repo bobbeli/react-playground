@@ -1,0 +1,67 @@
+/* fonts */
+html {
+
+	font-family: $font;
+	font-weight: normal;
+	font-size: 18px;
+
+	@include for-screen-max(phone) {
+		font-size: 16px;
+	}
+}
+
+body {
+	font-size: 1rem;
+}
+
+a, button {
+	color: c();
+	text-decoration: none;
+	@include transition();
+}
+
+p {
+	margin: 0 0 $item_space 0;
+	&.-nomargin {
+		margin: 0 0 0 0;
+	}
+}
+
+p, tr, li, input {
+
+	color: c();
+	line-height: 120%;
+
+	// Elements
+	em {
+		font-style: italic;
+	}
+
+	strong, b {
+		font-weight: 700;
+	}
+
+	small {
+		font-size: 0.75rem;
+		display: inline-block;
+	}
+
+	&.big, .big {
+		font-size: 1.25rem;
+	}
+
+	sub, sup {
+		font-size: 0.75em;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+
+	sup {
+		top: -0.5em;
+	}
+
+	sub {
+		bottom: -0.25em;
+	}
+}

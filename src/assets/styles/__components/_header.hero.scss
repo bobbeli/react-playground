@@ -1,0 +1,53 @@
+.header-hero-section {
+	width: 100vw;
+	height: 40vh;
+	display:block;
+	position: relative;
+
+	.lazysizes-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	&.header-hero-image{
+		@include for-screen-max(tablet){
+			z-index: -2;
+			margin-top: - $header-height - 2 + px;
+		}
+
+	}
+
+	&.-size-big {
+		height: 80vh;
+		min-height: 400px;
+		@include for-screen-max(phone){
+			height:60vh;
+		}
+	}
+	&.-size-medium {
+		height: 45vh;
+		min-height: 250px;
+		@include for-screen-max(phone){
+			height:30vh;
+		}
+	}
+	&.-size-small {
+		height: 20vh;
+		min-height: 150px;
+	}
+
+
+	.header-hero-video {
+
+
+	}
+
+
+
+}

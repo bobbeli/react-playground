@@ -1,0 +1,31 @@
+//responsive mixins
+
+@mixin for-screen-min($name, $breakpoints: $device-breakpoints) {
+	$min: device-breakpoints-min($name, $breakpoints);
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+@mixin for-screen-max($name, $breakpoints: $device-breakpoints) {
+	$max: device-breakpoints-max($name, $breakpoints);
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+@mixin for-screen($name, $breakpoints: $device-breakpoints) {
+	@include for-screen-min($name, $breakpoints) {
+		@include for-screen-max($name, $breakpoints) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+// GRID
+// grid settings
+
+$grid-space-x: 1.6rem;
+$grid-space: ($grid-space-x / 2);
+
+$grid-columns: 12;
+$grid-size: $settings_breakpoint_desktop + 0px;
+$grid-size-container: 94%;
+$grid-breakpoints: (
+	//phone : 330px,
+	phone : 0px,
+	tablet : $settings_breakpoint_tablet + 0px,
+	desktop : $settings_breakpoint_desktop + 0px
+);

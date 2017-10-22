@@ -1,0 +1,41 @@
+/* headings */
+h1, h2, h3, h4, h5, h6, .heading {
+
+	margin: 0 0 0 0;
+	color: c(black, dark);
+	font-size: 3rem;
+	line-height: 120%;
+	font-family: $font_2;
+
+}
+
+//Sizes
+
+h1, .heading.heading-1 {
+	font-size: 3.5rem;
+	@include for-screen-max(tablet){
+		font-size: 2.5rem;
+	}
+	@include for-screen-max(phone){
+		font-size: 2rem;
+	}
+}
+
+h2, .heading.heading-2 {
+	font-size: 2.2rem;
+	font-weight: normal;
+	@include for-screen-max(tablet){
+		font-size: 2rem;
+	}
+	@include for-screen-max(phone){
+		font-size: 1.5rem;
+	}
+}
+
+h3, .heading.heading-3 {
+	font-size: 1.3rem;
+}
+
+h4, h5, h6, .heading.heading-small {
+	font-size: 1rem;
+}

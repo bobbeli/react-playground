@@ -1,0 +1,7 @@
+// TRANSITION
+// default transition settings
+
+$default-transition-property: all;
+$default-transition-duration: $settings_easing_speed + 0ms;
+$default-transition-function: cubic-bezier($settings_easing_bezier);
+$default-transition-delay: false;

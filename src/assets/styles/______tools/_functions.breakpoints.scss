@@ -1,0 +1,14 @@
+@function device-breakpoints-min($name, $breakpoints: $device-breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0px, $min, null);
+}
+
+@function device-breakpoints-max($name, $breakpoints: $device-breakpoints) {
+	$next: device-breakpoints-next($name, $breakpoints);
+	@return if($next, device-breakpoints-min($next, $breakpoints) - 0.1, null);
+}
+
+@function device-breakpoints-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+	$n: index($breakpoint-names, $name);
+	@return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}

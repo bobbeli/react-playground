@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import "compass/css3";
+
+/*! Created by Say Hello GmbH (Switzerland), hello@sayhello.ch */
+/*
+
+This stylesheet was generated using Sass (http://sass-lang.com) and Compass (http://compass-style.org/).
+Original files can be found inside the /.bulid/assets/styles/ Folder inside the main folder of this project.
+
+The structure follows the principles of ITCSS (http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)
+
+*/
+
+/*
+>> SETTINGS
+>> variables used inside Sass
+>> no output expected
+*/
+@import "_______settings/easings";
+@import "_______settings/grid";
+@import "_______settings/devices";
+@import "_______settings/theme";
+@import "_______settings/default.transition";
+@import "_______settings/default.boxshadow";
+@import "_______settings/socialmedia";
+
+/*
+>> TOOLS
+>> Mixins and Functions used inside Sass
+>> no output expected
+*/
+@import "______tools/functions.breakpoints";
+@import "______tools/mixins.clearfix";
+@import "______tools/mixins.word-wrap";
+@import "______tools/mixins.ellipsis";
+@import "______tools/mixins.breakpoints";
+@import "______tools/mixins.spinner";
+@import "______tools/mixins.grid";
+@import "______tools/mixins.theme";
+@import "______tools/functions.color";
+
+/*
+>> GENERIC
+>> reset and/or normalize styles, box-sizing definition, etc.
+*/
+@import "_____generic/box-sizing";
+@import "_____generic/normalize";
+@import "_____generic/resets";
+@import "_____generic/button";
+@import "_____generic/spinner";
+@import "_____generic/a11y";
+
+/*
+>> ELEMENTS
+>> styling for bare HTML elements (like H1, A, etc.) 
+*/
+@import "____elements/page";
+@import "____elements/btn";
+@import "____elements/forms";
+@import "____elements/font";
+@import "____elements/font.heading";
+@import "____elements/list";
+@import "____elements/iframe";
+@import "____elements/table";
+@import "____elements/img";
+@import "____elements/svg";
+@import "____elements/icon";
+@import "____elements/button";
+@import "____elements/responsive.debug";
+@import "____elements/cssLoaded";
+@import "____elements/modules/fancybox.custom";
+@import "____elements/modules/flickity.custom";
+
+/*
+>> OBJECTS
+>> class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+*/
+@import "___objects/grid";
+@import "___objects/hidden";
+
+/*
+>> COMPONENTS
+>> specific UI components
+*/
+@import "__components/excerpt-post";
+@import "__components/layout";
+@import "__components/header.logo";
+@import "__components/header.hero";
+@import "__components/header.navi";
+@import "__components/main.title";
+@import "__components/footer";
+@import "__components/singular-page-front";
+
+/*
+>>> Templates
+ */
+@import "__components/wp.postcontent";
+@import "__components/wp.gallery";
+@import "__components/wp.images";
+
+/*
+>> TRUMPS
+>> utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+*/

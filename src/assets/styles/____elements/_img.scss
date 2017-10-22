@@ -1,0 +1,22 @@
+/* img */
+img {
+	max-width: 100% !important;
+	height: auto;
+}
+
+.lazysizes_wrapper {
+
+	display: inline-block;
+
+	img {
+		display: block;
+	}
+
+	.lazyload, .lazyloading {
+		@include opacity(0);
+	}
+	.lazyloaded {
+		@include opacity(1);
+		@include single-transition(opacity, $settings_easing_speed + 0ms);
+	}
+}

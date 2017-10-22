@@ -1,0 +1,37 @@
+// THEME
+// general theme settings
+
+// FONTS
+$font: 'Raleway', sans-serif;
+$font_2: 'Raleway', sans-serif;
+
+$font-size: 1.2rem;
+
+// COLORS
+$colors: (
+	black : (
+		base: $settings_c_black,
+		light: lighten($settings_c_black, 25%),
+		dark: #000
+	),
+	white : (
+		base: #fff,
+		dark: #F1EEEE
+	)
+);
+
+$c_bkg: #e4e3de;
+
+// GENERAL
+
+$wp_postcontent_class: 'post-content';
+
+$item_space: 2rem;
+$section_space: $item_space*4;
+$section_space_mobile: $item_space*2;
+
+$header-height : $settings_header_height;
+$header-height-small : 50px;
+$footer-height: $settings_footer_height;
+$content-max-width : $settings_footer_height;
+$settings_breakpoint_navigation : 900px;

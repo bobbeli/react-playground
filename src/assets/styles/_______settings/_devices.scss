@@ -1,0 +1,7 @@
+$device-breakpoints: (
+	small-phone : 0px,
+	phone : $settings_breakpoint_phone + 0px,
+	tablet : $settings_breakpoint_tablet + 0px,
+	tablet-landscape: $settings_breakpoint_tablet_landscape + 0px,
+	desktop : $settings_breakpoint_desktop + 0px
+);

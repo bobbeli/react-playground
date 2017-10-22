@@ -1,0 +1,11 @@
+.btn {
+	display: inline-block;
+	font-weight: bold;
+	position: relative;
+	border-bottom: 0.2rem solid;
+
+	&:hover {
+		color: c(black, light);
+	}
+
+}

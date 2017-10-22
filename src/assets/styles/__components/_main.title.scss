@@ -1,0 +1,20 @@
+.main-title-section {
+
+	.title-overlay {
+		background-color: c(white);
+		margin-top: -150px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: $item_space;
+
+		h2 {
+			margin-top: $item_space / 2;
+		}
+
+	}
+	
+	.no-title-overlay {
+		padding-left: $item_space;
+	}
+
+}

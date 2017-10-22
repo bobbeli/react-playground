@@ -1,0 +1,11 @@
+@mixin mobile-navigation() {
+	@media (max-width: $settings_breakpoint_navigation + 0px) {
+		@content;
+	}
+}
+
+@mixin desktop-navigation() {
+	@media (min-width: $settings_breakpoint_navigation + 0px) {
+		@content;
+	}
+}

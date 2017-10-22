@@ -1,0 +1,7 @@
+@function color($color: black, $tone: 'base') {
+	@return map-get(map-get($colors, $color), $tone);
+}
+
+@function c($color: black, $tone: 'base') {
+	@return color($color, $tone);
+}
