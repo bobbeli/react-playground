@@ -1,19 +1,17 @@
 import React from 'react';
-import {render} from 'react-dom';
-import AddInventoryItem from './AddInventoryItem'
-
+import InventoryCreate from './Inventory/InventoryCreate'
+import InventoryContainer from "./Inventory/InventoryContainer";
 
 
 class Main extends React.Component {
-    constructor(props){
-        super(props);
-    }
-
     render() {
         return (
-            <AddInventoryItem />
+            <div>
+                <InventoryCreate onCreate={this.props.onCreate} />
+                <InventoryContainer inventory={this.props.inventory}/>
+            </div>
 
-    );
+        );
     }
 }
 

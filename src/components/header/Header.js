@@ -1,13 +1,8 @@
 import React from 'react';
-import {render} from 'react-dom';
 import {AppBar} from 'material-ui';
 
 
 class Header extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <section id="header">

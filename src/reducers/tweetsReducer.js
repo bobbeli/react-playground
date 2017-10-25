@@ -17,9 +17,6 @@ export default function reducer(state={
                 fetched: true,
                 users: action.payload }
         }
-        case "FETCH_TWEETS_REJECTED": {
-            return {...state, fetching: false, error: action.payload }
-        }
     }
     return state;
 }
