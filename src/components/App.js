@@ -18,7 +18,20 @@ class App extends Component {
     }
 
     onCreate(title, desc, price){
-        this.props.dispatch(inventory.addNewInventory(title, desc, price));
+        return new Promise((resolve, reject)=>{
+
+            this.props.dispatch(
+                inventory.addNewInventory(
+                    this.props.inventoryList.length + 1,
+                    title,
+                    desc,
+                    price)
+            );
+
+            //ToDo if Succesfully saved, resolve true, otherwise err
+            resolve(true);
+
+        });
 
     }
 
@@ -31,7 +44,7 @@ class App extends Component {
 
                 <Header title='Playground' version='Version 0.1'/>
 
-                <Main onCreate={this.onCreate} inventory={this.props.inventory} />
+                <Main onCreate={this.onCreate} inventoryList={this.props.inventoryList} />
 
                 <Footer/>
 
@@ -43,7 +56,7 @@ class App extends Component {
 
 function mapStateToProps(store) {
     return {
-        inventory: store.inventory.inventory,
+        inventoryList: store.inventory.inventoryList,
         inventoryFetched: store.inventory.fetched,
     };
 }

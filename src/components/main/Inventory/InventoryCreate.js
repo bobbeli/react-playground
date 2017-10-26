@@ -26,6 +26,7 @@ class AddInventoryItem extends React.Component {
         this.onChangeSelect = this.onChangeSelect.bind(this);
         this.onChangeDesc= this.onChangeDesc.bind(this);
         this.onChangePrice = this.onChangePrice.bind(this);
+        this.onChangeTitle = this.onChangeTitle.bind(this);
         this.saveItem = this.saveItem.bind(this);
     }
 
@@ -34,13 +35,16 @@ class AddInventoryItem extends React.Component {
             this.state.title,
             this.state.descVal,
             this.state.priceVal
-        );
+        ).then((suc) => {
+            if(suc){
+                this.handleClose();
+            }
+        });
+
     }
 
     onChangeInput(event, newVal) {
         if(newVal.length){
-            console.log('newval', newVal, ' event ', event.target.value)
-
             this.setState({title: newVal});
             this.setState({button_disabled: false});
         } else {
@@ -50,6 +54,7 @@ class AddInventoryItem extends React.Component {
     }
 
     onChangeSelect = (event, newVal) => this.setState({selectVal: newVal});
+    onChangeTitle = (event, newVal) => this.setState({title: newVal});
     onChangeDesc = (event, newVal) => this.setState({descVal: newVal});
     onChangePrice = (event, newVal) => this.setState({priceVal: newVal});
 
@@ -59,8 +64,7 @@ class AddInventoryItem extends React.Component {
     };
 
     handleClose = () => {
-        this.setState({title: 'arsch'});
-
+        this.setState({title: ''});
         this.setState({open: false});
     };
 
@@ -78,7 +82,7 @@ class AddInventoryItem extends React.Component {
                 <TextField
                     hintText="e.g Beamer, Table etc."
                     floatingLabelText="Add new inventory"
-                    onChange={this.onChangeInput}
+                    onChange={this.onChangeTitle}
                 />
                 <RaisedButton label="Add"
                               primary={true}
@@ -95,6 +99,7 @@ class AddInventoryItem extends React.Component {
                     <TextField
                         floatingLabelText="Title"
                         value={this.state.title}
+                        onChange={this.onChangeTitle}
                     />
                     <TextField
                         floatingLabelText="Description"

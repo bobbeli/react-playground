@@ -8,7 +8,7 @@ class Main extends React.Component {
         return (
             <div>
                 <InventoryCreate onCreate={this.props.onCreate} />
-                <InventoryContainer inventory={this.props.inventory}/>
+                <InventoryContainer inventoryList={this.props.inventoryList}/>
             </div>
 
         );

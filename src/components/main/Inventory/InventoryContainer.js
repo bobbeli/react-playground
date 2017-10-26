@@ -6,7 +6,7 @@ class InventoryContainer extends Component {
     render() {
         return (
             <div>
-                <InventoryTable inventory={this.props.inventory} />
+                <InventoryTable inventoryList={this.props.inventoryList} />
             </div>
         );
     }

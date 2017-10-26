@@ -13,9 +13,11 @@ import {
 class InventoryTable extends Component {
 
     renderRow() {
+        console.log(this.props)
 
-        if (typeof this.props.inventory.inventor !== 'undefined') {
-            return this.props.inventory.inventor.map((i) =>
+
+        if (typeof this.props.inventoryList !== 'undefined') {
+            return this.props.inventoryList.map((i) =>
                 <TableRow key={i.id}>
                     <TableRowColumn>{i.id}</TableRowColumn>
                     <TableRowColumn>{i.title}</TableRowColumn>

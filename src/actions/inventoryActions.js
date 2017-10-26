@@ -1,8 +1,8 @@
 export function fetchInventory() {
     return {
         type: 'FETCH_INVENTORY_FULFILLED',
-        payload: {
-            "inventor": [
+        payload:
+            [
                 {
                     "id": 1,
                     "title": "Beamer",
@@ -16,16 +16,15 @@ export function fetchInventory() {
                     "price": 400
                 }
             ]
-        }
     }
 }
 
-export function addNewInventory(title, desc, price) {
+export function addNewInventory(id, title, desc, price) {
     return {
         type: 'ADD_NEW_INVENTORY',
         payload:
             {
-                "id": 25,
+                "id": id,
                 "title": title,
                 "description": desc,
                 "price": price
