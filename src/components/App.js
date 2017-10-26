@@ -17,8 +17,8 @@ class App extends Component {
         this.props.dispatch(inventory.fetchInventory());
     }
 
-    onCreate(title){
-        console.log('Clicked on Create. Val: ', title);
+    onCreate(title, desc, price){
+        this.props.dispatch(inventory.addNewInventory(title, desc, price));
 
     }
 

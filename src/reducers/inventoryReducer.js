@@ -26,6 +26,16 @@ export default function reducer(state = {
                 inventory: action.payload
             }
         }
+        case 'ADD_NEW_INVENTORY': {
+            console.log();
+            return {
+                ...state,
+                fetching: false,
+                fetched: false,
+                inventory:state.inventory + action.payload
+            }
+
+        }
     }
     return state;
 }

@@ -20,4 +20,17 @@ export function fetchInventory() {
     }
 }
 
+export function addNewInventory(title, desc, price) {
+    return {
+        type: 'ADD_NEW_INVENTORY',
+        payload:
+            {
+                "id": 25,
+                "title": title,
+                "description": desc,
+                "price": price
+            }
+    }
+}
+
 
