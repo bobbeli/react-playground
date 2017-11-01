@@ -30,7 +30,6 @@ export default function reducer(state = {
             }
         }
         case 'ADD_NEW_INVENTORY': {
-            console.log('add state', state, action);
             return {
                 ...state,
                 fetching: false,

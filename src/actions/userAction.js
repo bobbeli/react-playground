@@ -11,6 +11,7 @@ export function fetchUser() {
     }
 }
 
+
 export function fetchAPIUser() {
     return (dispatch) => {
         axios.get('https://jsonplaceholder.typicode.com/users/1')

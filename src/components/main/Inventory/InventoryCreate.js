@@ -14,7 +14,7 @@ class AddInventoryItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            button_disabled: true,
+            button_disabled: false,
             title: '',
             selectVal: '',
             descVal: '',
